@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+<script>
+    function checkForm()
+    {
+        var user=document.getElementById("user").value;
+        if(user==""){
+            alert("用户名不能为空!");
+            return false;
+        }
+        var password=document.getElementById("password").value;
+        if(password==""){
+            alert("密码不能为空!");
+            return false;
+        }
+        var repassword=document.getElementById("repassword").value;
+        if(password!=repassword){
+            alert("两次输入的密码不一致!");
+            return false;
+        }
+
+    }
+
+
+</script>
+
+<form action="#" method="get" name="regForm" onsubmit="return checkForm()">
+    <table border="1px" width="750px" height="400px" align="center" cellpadding="0px" cellspacing="0px" bgcolor="white">
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" name="user" size="34px" id="user" value="请输入用户名"/></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="password" name="password" size="34px" id="password" value="请输入密码"/></td>
+        </tr>
+        <tr>
+            <td>确认密码</td>
+            <td><input type="password" name="repassword" size="34px" id="repassword" value="确认密码"/></td>
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td><input type="email" name="email" size="34px" id="email" value="请输入邮箱"/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="注册"/></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
